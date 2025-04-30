@@ -24,7 +24,7 @@ describe('Home Page', () => {
     homePage.clickOnCategory(testData.category);
     homePage.clickOnProduct(testData.product);
     homePage.clickOnButton('Add to cart');
-    homePage.assertAllert('Product added');
+    homePage.assertAlert('Product added');
     homePage.clickOnLink('Cart');
     cy.get('#tbodyid td').should('contain.text', testData.product);
     homePage.clickOnButton('Place Order');
